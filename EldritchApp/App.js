@@ -9,11 +9,13 @@
 import React from 'react';
 import type {Node} from 'react';
 import {
+  Button,
   SafeAreaView,
   ScrollView,
   StatusBar,
   StyleSheet,
   Text,
+  TouchableOpacity,
   useColorScheme,
   View,
 } from 'react-native';
@@ -70,20 +72,19 @@ const App: () => Node = () => {
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.js</Text> to change this
-            screen and then come back to see your edits.
+          <Section title="Cthulhu">
+            Partida 1
           </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
+          <Section title="Yogg">
+            Partida 2
           </Section>
-          <Section title="Debug">
-            <DebugInstructions />
+          <Section title="Lovecraft">
+            Partida 3
           </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
+          
+          <TouchableOpacity style={styles.btnNovaPartida}>
+            <Text>Nova Partida</Text>
+          </TouchableOpacity>
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -107,6 +108,18 @@ const styles = StyleSheet.create({
   highlight: {
     fontWeight: '700',
   },
+  btnNovaPartida: {
+    backgroundColor: '#03A062',
+    margin: 20,
+    height: 50,
+    borderRadius: 4,
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  textBtnNovaPartida:{
+    fontSize: 16,
+    fontWeight: 'bold'
+  }
 });
 
 export default App;
